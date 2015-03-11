@@ -6,6 +6,11 @@ get '/categories/:category_id/photos/uploader' do |category_id|
   erb :"photo/uploader"
 end
 
+get '/photos/:id' do
+  @photo = Photo.find(params[:id])
+  erb :"photo/show"
+end
+
 post '/photos/uploader' do
   p params
   @filename = params[:file][:filename]
@@ -20,5 +25,18 @@ post '/photos/uploader' do
   category.photos.create(params[:photo].merge({photo_url: photo_url}))
 
   redirect "/categories/#{category.id}"
+end
 
+get '/photos/:id/edit' do
+end
+
+put '/photos/:id' do
+end
+
+delete '/photos/:id' do
+  photo = Photo.find(params[:id])
+  category = photo.category_id
+  photo.destroy
+
+  redirect "/categories/#{category}"
 end
