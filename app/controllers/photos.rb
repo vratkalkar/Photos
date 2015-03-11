@@ -3,11 +3,6 @@ get '/categories/:category_id/photos/uploader' do |category_id|
   erb :"photo/uploader"
 end
 
-get '/photos/:id' do
-  @photo = Photo.find(params[:id])
-  erb :"photo/show"
-end
-
 post '/photos/uploader' do
   @filename = params[:file][:filename]
   file = params[:file][:tempfile]
@@ -23,6 +18,20 @@ post '/photos/uploader' do
   redirect "/categories/#{category.id}"
 end
 
+get '/photos/all' do
+  erb :"photo/all"
+end
+
+get '/photos/all.json' do
+  @photos = Photo.all
+  @photos.to_json
+end
+
+get '/photos/:id' do
+  @photo = Photo.find(params[:id])
+  erb :"photo/show"
+end
+
 get '/photos/:id/edit' do
   @photo = Photo.find(params[:id])
   @category = @photo.category_id
@@ -35,6 +44,7 @@ put '/photos/:id' do
 
   redirect "/photos/#{@photo.id}"
 end
+
 
 delete '/photos/:id' do
   photo = Photo.find(params[:id])
