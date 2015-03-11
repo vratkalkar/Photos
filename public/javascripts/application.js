@@ -2,8 +2,10 @@
 //
 
 $(document).ready(function(){
+
   $('#logIn').on('click', function(event){
     event.preventDefault();
+    Login.show();
 
     $.ajax({
     url:'/login',
@@ -69,6 +71,10 @@ $('#logInForm').on('submit', function(event){
  });
 
 
-
-
 });
+
+
+function Photo(params){
+  this.name = params.name;
+  this.photo_url = params.photo_url;
+}
