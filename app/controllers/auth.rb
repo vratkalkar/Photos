@@ -6,7 +6,7 @@ post '/signup' do
   @new_user = User.new(params[:user])
   if @new_user.save
     session[:user_id] = @new_user.id
-    redirect '/'
+    redirect '/categories/all'
   else
     redirect '/signup'
  end
