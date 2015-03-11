@@ -2,8 +2,10 @@
 //
 
 $(document).ready(function(){
+
   $('#logIn').on('click', function(event){
     event.preventDefault();
+    Login.show();
 
     $.ajax({
     url:'/login',
@@ -81,7 +83,7 @@ $('#logInForm').on('submit', function(event){
   //         photos.push( new Photo(i.name, i.photo_url));
   //       }
   //       console.log(photos);
-
+// });
   //       for(var j in photos){
   //         $('#allPhotos').append("<img src='" +j.photo_url+ "'/>");
   //       }
@@ -95,5 +97,5 @@ $('#logInForm').on('submit', function(event){
   function Photo(name,photo_url){
     this.name = name;
     this.photo_url = photo_url;
-  }
+ }
 });

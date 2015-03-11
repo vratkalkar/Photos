@@ -3,6 +3,18 @@ get '/categories/:category_id/photos/uploader' do |category_id|
   erb :"photo/uploader"
 end
 
+get '/photos' do
+  p params
+  @photos = Photo.all
+  erb :"photo/all"
+end
+
+get '/photos/:id' do
+  @photo = Photo.find(params[:id])
+  erb :"photo/show"
+end
+
+
 post '/photos/uploader' do
   @filename = params[:file][:filename]
   file = params[:file][:tempfile]
@@ -44,7 +56,6 @@ put '/photos/:id' do
 
   redirect "/photos/#{@photo.id}"
 end
-
 
 delete '/photos/:id' do
   photo = Photo.find(params[:id])
