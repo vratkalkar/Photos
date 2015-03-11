@@ -10,7 +10,7 @@ post '/photos/uploader' do
   p params
   @filename = params[:file][:filename]
   file = params[:file][:tempfile]
-  photo_url = "public/img/#{@filename}"
+  photo_url = "/img/#{@filename}"
 
   File.open("public/img/#{@filename}", "wb") do |f|
     f.write(file.read)

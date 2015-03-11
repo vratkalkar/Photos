@@ -2,6 +2,11 @@
 
 <a href="/categories/<%= @category.id %>/photos/uploader">Add Photo</a>
 
+<div>
+  <% @photos.each do |photo| %>
+    <p><img src="<%= photo.photo_url %>"></p>
+  <% end %>
+</div>
 
 
 

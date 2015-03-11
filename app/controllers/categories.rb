@@ -5,5 +5,6 @@ end
 
 get '/categories/:id' do
   @category = Category.find(params[:id])
+  @photos = @category.photos
   erb :"category/show"
 end
