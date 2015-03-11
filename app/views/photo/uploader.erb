@@ -1,7 +1,8 @@
 <h2>Choose a Photo</h2>
 
 <div>
-  <form id="photoUploader" action="/upload.json" method="post" enctype="multipart/form-data">
+  <form id="photoUploader" action="/photos/uploader" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="category_id" value="<%= @category.id %>">
     <input type="text" name="photo[name]" placeholder="photo name here">
     <input type="file" name="file">
     <input type="submit" value="Upload">
