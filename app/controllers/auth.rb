@@ -3,6 +3,7 @@ get '/signup' do
 end
 
 post '/signup' do
+  p params
   @new_user = User.new(params[:user])
   if @new_user.save
     session[:user_id] = @new_user.id
