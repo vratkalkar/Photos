@@ -17,13 +17,21 @@ get '/login' do
   erb :"auth/login"
 end
 
-post '/login' do
+# post '/login' do
+#   @user = User.find_by(email: params[:user][:email])
+#    if @user.try(:authenticate, params[:user][:password])
+#     session[:user_id] = @user.id
+#     redirect '/categories'
+#    else
+#     redirect '/login'
+#   end
+# end
+
+post '/login.json' do
   @user = User.find_by(email: params[:user][:email])
-   if @user.try(:authenticate, params[:user][:password])
+  if @user.try(:authenticate, params[:user][:password])
     session[:user_id] = @user.id
-    redirect '/categories'
-   else
-    redirect '/login'
+    {url: "/categories"}.to_json
   end
 end
 
