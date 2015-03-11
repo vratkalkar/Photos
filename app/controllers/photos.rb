@@ -1,6 +1,3 @@
-get '/photos/new' do
-end
-
 get '/categories/:category_id/photos/uploader' do |category_id|
   @category = Category.find(category_id)
   erb :"photo/uploader"
@@ -12,7 +9,6 @@ get '/photos/:id' do
 end
 
 post '/photos/uploader' do
-  p params
   @filename = params[:file][:filename]
   file = params[:file][:tempfile]
   photo_url = "/img/#{@filename}"
@@ -33,6 +29,10 @@ get '/photos/:id/edit' do
 end
 
 put '/photos/:id' do
+  @photo = Photo.find(params[:id])
+  @photo.update(name: params[:photo][:name])
+
+  redirect "/photos/#{@photo.id}"
 end
 
 delete '/photos/:id' do

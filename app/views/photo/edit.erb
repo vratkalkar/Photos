@@ -5,5 +5,9 @@
 </div>
 
 <div>
-  <%= @photo.photo_url %>">
+    <form id="photoUploader" action="/photos/<%= @photo.id %>" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="_method" value="PUT">
+      <input class="col-md-4" type="text" name="photo[name]" value="<%= @photo.name %>">
+      <input class= "btn default" type="submit" value="Update Caption">
+    </form>
 </div>

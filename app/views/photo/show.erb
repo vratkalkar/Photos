@@ -1,13 +1,20 @@
+<div class="container">
+  <div>
+    <img src="<%= @photo.photo_url %>">
+  </div>
 
-<div>
-  <img src="<%= @photo.photo_url %>">
+  <div>
+    <%= @photo.name %>
+  </div>
+
+  <form action="/photos/<%= @photo.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input class="btn primary" type="submit" value="Delete Photo">
+  </form>
+
+  <form action="/photos/<%= @photo.id %>/edit" method="GET">
+    <input type="hidden" name="_method" value="PUT">
+    <input class="btn primary" type="submit" value="Update Photo">
+  </form>
+
 </div>
-
-<div>
-  <%= @photo.name %>
-</div>
-
-<form action="/photos/<%= @photo.id %>" method="POST">
-  <input type="hidden" name="_method" value="DELETE">
-  <input class="btn primary" type="submit" value="Delete Photo">
-</form>
