@@ -16,4 +16,20 @@ $(document).ready(function(){
     },
    });
   });
+
+$('#signUp').on('click', function(event){
+    event.preventDefault();
+
+
+    $.ajax({
+    url:'/signup',
+    type: 'GET',
+    success: function(response){
+      $("#index_page").html(response);
+    },
+    error: function(response){
+      alert("This is an error");
+    },
+   });
+ });
 });
