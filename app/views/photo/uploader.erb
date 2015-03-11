@@ -1,10 +1,15 @@
-<h2>Choose a Photo</h2>
 
-<div>
-  <form id="photoUploader" action="/photos/uploader" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="category_id" value="<%= @category.id %>">
-    <input type="text" name="photo[name]" placeholder="photo name here">
-    <input type="file" name="file">
-    <input type="submit" value="Upload">
-  </form>
+<div class="col-md-offset-5 col-md-4">
+
+  <h2>Choose a Photo</h2>
+
+  <div>
+    <form id="photoUploader" action="/photos/uploader" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="category_id" value="<%= @category.id %>">
+      <input class="form-control" type="text" name="photo[name]" placeholder="photo name here">
+      <input class="btn" type="file" name="file">
+      <input class= "btn default" type="submit" value="Upload">
+    </form>
+  </div>
+
 </div>
