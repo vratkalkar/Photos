@@ -5,7 +5,6 @@ $(document).ready(function(){
 
   $('#logIn').on('click', function(event){
     event.preventDefault();
-    Login.show();
 
     $.ajax({
     url:'/login',
