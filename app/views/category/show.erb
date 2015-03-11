@@ -1,6 +1,9 @@
-<h2><%= @category.title %></h2>
 
-<a href="/categories/<%= @category.id %>/photos/uploader">Add Photo</a>
+<div class="col-md-offset-5 col-md-4">
+  <h2><%= @category.title %></h2>
+  <a href="/categories/<%= @category.id %>/photos/uploader">Add Photo</a>
+  <a href="/categories">Back</a>
+</div>
 
 <div>
   <% @photos.each do |photo| %>
@@ -16,6 +19,3 @@
 
 
 
-
-
-<a href="/categories">Back</a>
