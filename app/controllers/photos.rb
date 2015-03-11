@@ -28,6 +28,8 @@ post '/photos/uploader' do
 end
 
 get '/photos/:id/edit' do
+  @photo = Photo.find(params[:id])
+  erb :"photo/edit"
 end
 
 put '/photos/:id' do

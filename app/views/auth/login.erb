@@ -1,5 +1,14 @@
-<form action="/login" method="POST">
-  <input type="text" name="user[email]" placeholder="Email Here">
-  <input type="password" name="user[password]" placeholder="Password Here">
-  <input type="submit" value="Login">
-</form>
+<div class="col-md-offset-4 col-md-4">
+
+      <form action="/login" method="POST" class="form-signin">
+        <h2 class="form-signin-heading">Log In</h2>
+
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" name="user[email]"id="inputEmail" class="form-control" placeholder="Email" required>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="user[password]" id="inputPassword" class="form-control" placeholder="Password" required>
+        <button class="btn btn-primary btn-block" type="submit">Login</button>
+      </form>
+
+</div>

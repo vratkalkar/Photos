@@ -1,7 +1,20 @@
-<form action="/signup" method="POST">
-  <input type="text" name="user[name]" placeholder="Name Here">
-  <input type="text" name="user[email]" placeholder="Email Here">
-  <input type="password" name="user[password]" placeholder="Password Here">
-  <input type="password" name="user[password_confirmation]" placeholder="Confirm Password">
-  <input type="submit" value="Signup">
-</form>
+<div class="col-md-offset-4 col-md-4">
+
+      <form action="/signup" method="POST" class="form-signin">
+        <h2 class="form-signin-heading">Sign Up</h2>
+        <label for="inputName" class="sr-only">Full name</label>
+        <input type="text" name="user[name]" id="inputName" class="form-control" placeholder="Full name" required autofocus>
+
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" name= "user[email]"id="inputEmail" class="form-control" placeholder="Email" required>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="user[password]" id="inputPassword" class="form-control" placeholder="Password" required>
+
+        <label for="inputPassword" class="sr-only">Confirm Password</label>
+        <input type="password" name="user[password_confirmation]" id="inputPassword" class="form-control" placeholder="Confirm Password" required>
+
+        <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+</div>
