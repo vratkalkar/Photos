@@ -1,13 +1,16 @@
-<h2>Edit Photo</h2>
+<div class="col-md-offset-4 col-md-8">
+  <h2>Edit Photo</h2>
 
-<div>
-  <img src="<%= @photo.photo_url %>">
-</div>
+  <div>
+    <img src="<%= @photo.photo_url %>">
+  </div>
 
-<div>
-    <form id="photoUploader" action="/photos/<%= @photo.id %>" method="post" enctype="multipart/form-data">
-      <input type="hidden" name="_method" value="PUT">
-      <input class="col-md-4" type="text" name="photo[name]" value="<%= @photo.name %>">
-      <input class= "btn default" type="submit" value="Update Caption">
-    </form>
+  <div>
+      <form id="photoUploader" action="/photos/<%= @photo.id %>" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="_method" value="PUT">
+        <input class="form-control-" type="text" name="photo[name]" value="<%= @photo.name %>">
+        <br>
+        <input id="edit_button" class= "btn default" type="submit" value="Update Caption">
+      </form>
+  </div>
 </div>
