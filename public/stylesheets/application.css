@@ -45,9 +45,13 @@ img {
   height: auto;
  }
 
+ .media-grid {
+   list-style-type: none;
+ }
+
 .edit_photo img{
   width: 100%;
-  padding-right: 60px;
+  padding-right: 100px;
   height: auto;
 }
 #title{

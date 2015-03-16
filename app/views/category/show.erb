@@ -12,7 +12,7 @@
     <ul class="media-grid">
       <% @photos.each do |photo| %>
         <a href="/photos/<%= photo.id %>">
-         <li><img src="<%= photo.photo_url %>" class="img-thumbnail" alt="Thumbnail Image"></li>
+        <li><img src="<%= photo.photo_url %>" class="img-thumbnail" alt="Thumbnail Image"></li>
         </a>
     <% end %>
    </div>
