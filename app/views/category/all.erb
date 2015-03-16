@@ -2,10 +2,11 @@
 
 <h2 id="title"> Select a Category </h2>
 
+<div class="all_categories">
   <% @categories.each do |category| %>
    <ul>
     <a class="thumbnail" href="/categories/<%= category.id %>"><%= category.title %></a>
-  </ul>
+   </ul>
   <% end %>
 </div>
 
