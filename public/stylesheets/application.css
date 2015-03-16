@@ -2,10 +2,6 @@ body {
   padding-top: 100px;
 }
 
-.homepage {
-  color: black;
-}
-
 h1{
   color: black;
   padding-top: 200px;
@@ -20,7 +16,9 @@ h2{
 }
 
 img {
+  position: relative;
   width: 40%;
+  height: 40%;
 }
 
 #title{
