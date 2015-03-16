@@ -24,6 +24,11 @@ ul {
   padding-left: 60px;
 }
 
+.photo_buttons {
+  padding-left: 38%;
+  margin: 20px;
+}
+
 img {
   position: relative;
   width: 40%;
