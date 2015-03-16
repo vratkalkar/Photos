@@ -63,7 +63,8 @@ $('#logInForm').on('submit', function(event){
       window.location.replace(response.url);
     },
     error: function(response){
-      alert(response);
+      var error = "Invalid login info. Please try again.";
+      alert(error);
     },
    });
  });
