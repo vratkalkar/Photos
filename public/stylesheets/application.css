@@ -5,6 +5,11 @@ body {
 
 h1{
   color: white;
+  padding-top: 200px;
+}
+
+.buttons {
+  padding-left: 60px;
 }
 
 img {
