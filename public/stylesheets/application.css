@@ -30,9 +30,7 @@ ul {
 }
 
 img {
-  position: relative;
-  width: 40%;
-  height: 40%;
+  padding-right: 200px;
 }
 
 .photos {
