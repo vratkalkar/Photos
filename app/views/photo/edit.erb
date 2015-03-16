@@ -1,10 +1,6 @@
-<div class="col-md-offset-4 col-md-8">
+<div class="col-md-offset-2 col-md-8">
   <h2>Edit Photo</h2>
-
-  <div>
-    <img src="<%= @photo.photo_url %>">
-  </div>
-
+    <img class="img-thumbnail" src="<%= @photo.photo_url %>">
   <div>
       <form id="photoUploader" action="/photos/<%= @photo.id %>" method="post" enctype="multipart/form-data">
         <input type="hidden" name="_method" value="PUT">
