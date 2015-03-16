@@ -37,7 +37,6 @@ $('#signUp').on('click', function(event){
 $('#signUp').on('click', function(event){
     event.preventDefault();
 
-
     $.ajax({
     url:'/signup',
     type: 'GET',
