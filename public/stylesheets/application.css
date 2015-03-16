@@ -1,15 +1,18 @@
 body {
   padding-top: 100px;
-  background-color: black;
+}
+
+.homepage {
+  color: black;
 }
 
 h1{
-  color: white;
+  color: black;
   padding-top: 200px;
 }
 
 h2{
-  color:white;
+  color:black;
 }
 
 .buttons {

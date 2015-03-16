@@ -6,9 +6,9 @@
 
 <div class="col-md-offset-2">
   <% @photos.each do |photo| %>
-      <a href="/photos/<%= photo.id %>">
-        <img src="<%= photo.photo_url %>">
-      </a>
+    <a href="/photos/<%= photo.id %>">
+      <img src="<%= photo.photo_url %>" class="img-thumbnail" alt="Thumbnail Image">
+    </a>
   <% end %>
  </div>
 </div>
