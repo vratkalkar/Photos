@@ -1,13 +1,18 @@
-<div class="col-md-offset-4 col-md-5">
+<% if current_user %>
+  <div class="col-md-offset-4 col-md-5">
+    <h2 id="title"> Select a Category </h2>
 
-<h2 id="title"> Select a Category </h2>
-
-<div class="all_categories">
-  <% @categories.each do |category| %>
-   <ul>
-    <a class="thumbnail" href="/categories/<%= category.id %>"><%= category.title %></a>
-   </ul>
-  <% end %>
-</div>
-
-</div>
+    <div class="all_categories">
+      <% @categories.each do |category| %>
+       <ul>
+        <a class="thumbnail" href="/categories/<%= category.id %>"><%= category.title %></a>
+       </ul>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  <div class="col-md-offset-4 col-md-5">
+    <h3>Please Sign Up or Log In to view this page</h3>
+    <a style="margin-left: 168px" href="/" class="btn btn-default" type="submit">Back</a>
+ </div>
+<% end %>
