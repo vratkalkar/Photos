@@ -5,7 +5,6 @@
       <form id="photoUploader" action="/photos/<%= @photo.id %>" method="post" enctype="multipart/form-data">
         <input type="hidden" name="_method" value="PUT">
         <input class="form-control-" type="text" name="photo[name]" value="<%= @photo.name %>">
-        <br>
         <input id="edit_button" class= "btn default" type="submit" value="Update Caption">
       </form>
   </div>

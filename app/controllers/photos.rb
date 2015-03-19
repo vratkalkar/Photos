@@ -4,7 +4,6 @@ get '/categories/:category_id/photos/uploader' do |category_id|
 end
 
 get '/photos' do
-  p params
   @photos = Photo.all
   erb :"photo/all"
 end
@@ -41,8 +40,6 @@ put '/photos/:id' do
 
   redirect "/photos/#{@photo.id}"
 end
-
-
 
 delete '/photos/:id' do
   photo = Photo.find(params[:id])

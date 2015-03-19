@@ -45,8 +45,19 @@ img {
   height: auto;
  }
 
+ img:hover {
+  background-color: black;
+ }
+
+ .row {
+  padding-left: 40px;
+  margin: 0 auto;
+ }
+
  .media-grid {
    list-style-type: none;
+   padding-right: 84px;
+   width: 100%;
  }
 
 .edit_photo img{
@@ -54,6 +65,8 @@ img {
   padding-right: 100px;
   height: auto;
 }
+
 #title{
   text-align: center;
 }
+

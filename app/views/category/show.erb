@@ -7,12 +7,13 @@
   <a href="/categories" class="btn btn-default" type="submit">Back</a>
 </div>
 
+
  <div class="row">
   <div class="span16">
     <ul class="media-grid">
       <% @photos.each do |photo| %>
         <a href="/photos/<%= photo.id %>">
-        <li><img src="<%= photo.photo_url %>" class="img-thumbnail" alt="Thumbnail Image"></li>
+        <li><img id="hover" src="<%= photo.photo_url %>" class="img-thumbnail" alt="Thumbnail Image"></li>
         </a>
     <% end %>
    </div>

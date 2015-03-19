@@ -3,6 +3,12 @@
 
 $(document).ready(function(){
 
+  // $('#hover').mouseenter(function(){
+  //     $('.caption').toggle();
+  // }).mouseleave(function(){
+  //     $('.caption').toggle();
+  // });
+
   $('#logIn').on('click', function(event){
     event.preventDefault();
 

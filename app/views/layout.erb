@@ -6,7 +6,7 @@
   <link rel='stylesheet' href='/stylesheets/application.css' type='text/css' />
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <script src='javascripts/application.js'></script>
+  <script src='/javascripts/application.js'></script>
   <title><%= @title || "Photo App" %></title>
 </head>
 <body>
@@ -27,7 +27,6 @@
              <li><a href="/categories">Categories</a></li>
              <li><a href="/logout">Logout</a></li>
             <% else %>
-            <li><a href="/login">Login</a></li>
             <li><a href="#about">About</a></li>
             <% end %>
           </ul>
