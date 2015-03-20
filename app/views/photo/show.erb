@@ -12,7 +12,7 @@
     <input class="btn btn-default" type="submit" value="Update Caption">
   </form>
 
-  <form action="/photos/<%= @photo.id %>" method="POST">
+  <form class="photo_delete" action="/photos/<%= @photo.id %>" method="POST">
     <input type="hidden" name="_method" value="DELETE">
     <input class="btn btn-default" type="submit" value="Delete Photo">
   </form>
