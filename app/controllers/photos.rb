@@ -23,7 +23,7 @@ post '/photos/uploader' do
   end
 
   category = Category.find(params[:category_id])
-  category.photos.create(params[:photo].merge({photo_url: photo_url}))
+  category.photos.create(params[:photo].merge({photo_url: photo_url, user_id: current_user.id }))
 
   redirect "/categories/#{category.id}"
 end
