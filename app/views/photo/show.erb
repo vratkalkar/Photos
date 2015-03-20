@@ -10,14 +10,14 @@
 <% if current_user.id == @photo.user_id %>
   <form action="/photos/<%= @photo.id %>" method="POST">
     <input type="hidden" name="_method" value="DELETE">
-    <input class="btn primary" type="submit" value="Delete Photo">
+    <input class="btn btn-default" type="submit" value="Delete Photo">
   </form>
 
   <form action="/photos/<%= @photo.id %>/edit" method="GET">
-    <input class="btn primary" type="submit" value="Update Photo">
+    <input class="btn btn-default" type="submit" value="Update Photo">
   </form>
 <% else %>
- <a href="/categories/<%= @photo.category_id %>">Back</a>
+ <a class="btn btn-default" href="/categories/<%= @photo.category_id %>">Back</a>
   </div>
 <% end %>
 </div>
