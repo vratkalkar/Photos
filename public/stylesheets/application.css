@@ -4,10 +4,12 @@ body {
 }
 
 h1{
-  color: white;
-  position:relative;
+  color: black;
+  position: fixed;
   padding-top: 200px;
-  margin-left: 268px;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 180px;
 }
 
 h2{
@@ -26,7 +28,8 @@ ul {
 
 .buttons {
   padding-left: 60px;
-  margin-left: 268px;
+  padding-top: 240px;
+  margin-left: 188px;
 }
 
 .photo_buttons {
@@ -109,7 +112,7 @@ img {
 /* Signup Form CSS */
 
 #signUpForm {
-  padding-top: 140px;
+  padding-top: 160px;
 }
 
 
