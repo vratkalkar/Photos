@@ -3,11 +3,14 @@ body {
 }
 
 h1{
-  color: black;
+  color: white;
+  position:relative;
   padding-top: 200px;
+  margin-left: 200px;
 }
 
 h2{
+  position:relative;
   color:black;
 }
 
@@ -22,6 +25,7 @@ ul {
 
 .buttons {
   padding-left: 60px;
+  margin-left: 200px;
 }
 
 .photo_buttons {
@@ -83,6 +87,16 @@ img {
   position: relative;
   margin-left: 698px;
   margin-top: -34px;
+}
+
+/* Index headline box CSS */
+
+#headline_box {
+  border: 2px solid black;
+  background-color: black;
+  height: 500px;
+  width: 688px;
+  margin-right: 400px;
 }
 
 
