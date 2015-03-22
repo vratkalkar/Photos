@@ -1,12 +1,13 @@
 body {
   padding-top: 100px;
+  background-color : #eee9e9;
 }
 
 h1{
   color: white;
   position:relative;
   padding-top: 200px;
-  margin-left: 200px;
+  margin-left: 268px;
 }
 
 h2{
@@ -25,7 +26,7 @@ ul {
 
 .buttons {
   padding-left: 60px;
-  margin-left: 200px;
+  margin-left: 268px;
 }
 
 .photo_buttons {
@@ -95,8 +96,20 @@ img {
   border: 2px solid black;
   background-color: black;
   height: 500px;
-  width: 688px;
-  margin-right: 400px;
+  width: 800px;
+  margin-left: -60px;
+}
+
+/* Login Form CSS */
+
+#logInForm{
+  padding-top: 160px;
+}
+
+/* Signup Form CSS */
+
+#signUpForm {
+  padding-top: 140px;
 }
 
 
